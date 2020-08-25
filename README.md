@@ -9,10 +9,13 @@
 ```shell
 > node simple_producer.js
 ```
-__Note__: Excepts a Kinesis Data Stream named `demo-test` with one shard.
+__Note__: Expects a Kinesis Data Stream named `demo-test` with one shard.
 
 ## Run Simple Consumer
 ```shell
 > node simple_consumer.js
 ```
-__Note__: Excepts a Kinesis Data Stream named `demo-test` with one shard.
+__Note__
+* Expects a Kinesis Data Stream named `demo-test` with one shard.
+* Enhanced Fan-Out Consumer is not possible with Node AWS SDK as
+`SubscribeToShard` function is missing.
